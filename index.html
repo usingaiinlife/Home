@@ -1,96 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Using AI in Life — Autopilot Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO & Open Graph -->
-  <meta name="description" content="Sell digital products, capture leads, and add AI chat — all on GitHub Pages.">
-  <meta property="og:title" content="Using AI in Life — Autopilot Website">
-  <meta property="og:description" content="Launch a money-making site in minutes using free AI tools and Stripe checkout.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://usingaiinlife.github.io/autopilot-site/">
-  <meta property="og:image" content="https://usingaiinlife.github.io/autopilot-site/assets/images/preview.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Using AI in Life — Autopilot Website">
-  <meta name="twitter:description" content="Sell digital products and capture leads with AI automation.">
-  <meta name="twitter:image" content="https://usingaiinlife.github.io/autopilot-site/assets/images/preview.jpg">
+  <title>Using AI in Life™ — AI Systems that Attract Clients & Scale Your Service Business</title>
+  <meta name="description" content="Done-for-you AI systems for Realtors, Bookkeepers/CFOs, and Fitness Coaches. Generate leads, automate follow-up, and scale delivery — with Stripe-secure checkout and lifetime access." />
+  <link rel="canonical" href="https://usingaiinlife.github.io/home/index.html" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css"/>
-  <link rel="icon" href="images/favicon.ico"/>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Using AI in Life™ — AI Systems that Attract Clients" />
+  <meta property="og:description" content="Ready-made AI prompts, funnels, and playbooks that win clients and scale delivery with less effort." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://usingaiinlife.github.io/home/index.html" />
+  <meta property="og:image" content="https://usingaiinlife.github.io/home/images/og-default.jpg" />
 
-  <!-- Optional Stripe Buy Button Script (only needed if you use Buy Buttons) -->
-  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Using AI in Life™ — AI Systems that Attract Clients" />
+  <meta name="twitter:description" content="Ready-made AI prompts, funnels, and playbooks that win clients and scale delivery with less effort." />
+  <meta name="twitter:image" content="https://usingaiinlife.github.io/home/images/og-default.jpg" />
+
+  <link rel="icon" href="images/favicon.ico" />
+
+  <!-- Styles (lightweight, matches your shop aesthetic) -->
+  <style>
+    :root{
+      --bg:#0b0f1a; --card:#111829; --muted:#8aa1c1; --text:#e9eefc;
+      --brand:#ffd166; --brand-dark:#1a1a1a; --link:#7aa2ff; --pill:#e9edff; --pilltext:#2430a3;
+      --shadow:0 12px 28px rgba(0,0,0,.3);
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Ubuntu,Arial,sans-serif; line-height:1.6}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding:20px}
+    header, footer{border-bottom:1px solid rgba(255,255,255,.06)}
+    footer{border-top:1px solid rgba(255,255,255,.06); border-bottom:none; color:var(--muted)}
+    nav a{margin-right:14px}
+    .hero{padding:56px 0 28px}
+    .hero h1{font-size:clamp(30px,4vw,48px); line-height:1.08; margin:10px 0}
+    .lead{color:var(--muted); max-width:820px}
+    .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .btn{display:inline-block; padding:.85rem 1.1rem; border-radius:12px; font-weight:800}
+    .btn-primary{background:var(--brand); color:var(--brand-dark)}
+    .btn-ghost{border:1px solid rgba(255,255,255,.18); color:var(--text)}
+    .badges{display:flex; gap:10px; align-items:center; color:var(--muted); margin-top:14px; flex-wrap:wrap}
+    .badge{background:rgba(255,255,255,.06); padding:.35rem .6rem; border-radius:999px; font-size:12px}
+    .section{padding:26px 0}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
+    .card{background:var(--card); border-radius:16px; padding:20px; box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 8px; font-size:20px}
+    .list{margin:0; padding-left:18px}
+    .pill{display:inline-block; background:var(--pill); color:var(--pilltext); font-weight:700; font-size:12px; padding:.28rem .6rem; border-radius:999px; margin-right:.35rem}
+    .mini{font-size:13px; color:var(--muted)}
+    .cta-block{text-align:center; padding:38px 18px; background:linear-gradient(180deg,rgba(255,209,102,.08),rgba(255,209,102,.02)); border-radius:16px}
+    .sr{position:absolute; left:-9999px}
+  </style>
+
+  <!-- JSON-LD: Organization, WebSite (sitelinks), and FAQ for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Using AI in Life",
+    "url": "https://usingaiinlife.github.io/home/",
+    "logo": "https://usingaiinlife.github.io/home/images/og-default.jpg",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://usingaiinlife.github.io/home/",
+    "name": "Using AI in Life",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.google.com/search?q=site%3Ausingaiinlife.github.io+{search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How do I pay for a program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click a product and use Stripe Checkout for card or wallet payments. You’ll receive an instant receipt and access link."
+      }
+    },{
+      "@type": "Question",
+      "name": "Do I get lifetime access and updates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each purchase includes lifetime access to program files and free updates as we improve templates and prompts."
+      }
+    },{
+      "@type": "Question",
+      "name": "What niches are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We currently support Realtors, Bookkeepers/CFO advisory, and Fitness Coaches — with more niches launching soon."
+      }
+    }]
+  }
+  </script>
 </head>
-
 <body>
+
+  <!-- HEADER -->
   <header>
     <div class="container">
-      <nav>
-        <a href="index.html">Home</a>
+      <nav aria-label="Primary">
+        <strong>Using AI in Life™</strong>
+        <span class="sr"> | </span>
+        <a href="index.html" aria-current="page">Home</a>
         <a href="shop.html">Shop</a>
-        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Launch a Money-Making Site in Minutes</h1>
-      <p>Sell digital products, capture leads, and add AI chat — all hosted on GitHub Pages.</p>
-      <div class="buttons">
-        <a class="btn" href="shop.html">Browse Products</a>
-        <a class="btn secondary" href="contact.html">Join the List</a>
-      </div>
-    </div>
-  </section>
+  <!-- HERO -->
+  <main>
+    <section class="container hero">
+      <span class="pill">Real-World AI. Real-Life Results.</span>
+      <h1>AI Systems that Attract Clients & Scale Your Service Business</h1>
+      <p class="lead">
+        Ready-made prompts, funnels, and playbooks for <strong>Realtors</strong>, <strong>Bookkeepers/CFOs</strong>, and
+        <strong>Fitness Coaches</strong>. Launch in minutes — generate leads, automate follow-up, and deliver with calm consistency.
+      </p>
 
-  <main class="container">
-    <section id="how-it-works">
-      <h2>How You Earn</h2>
-      <div class="columns">
-        <div class="card">
-          <h3>Sell PDFs & Templates</h3>
-          <p>Link to Stripe checkout — no backend needed.</p>
-        </div>
-        <div class="card">
-          <h3>Build Your List</h3>
-          <p>Use Formspree forms to collect emails directly on GitHub Pages.</p>
-        </div>
-        <div class="card">
-          <h3>AI Chat (Optional)</h3>
-          <p>Embed your AI assistant or chatbot to answer visitor questions 24/7.</p>
-        </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="shop.html">Browse Products</a>
+        <a class="btn btn-ghost" href="products/realtor-lead-machine.html">See a Live Example</a>
+      </div>
+
+      <div class="badges" aria-label="Trust and compatibility">
+        <span class="badge">Stripe-secure checkout</span>
+        <span class="badge">Lifetime access</span>
+        <span class="badge">No coding required</span>
+        <span class="badge">Step-by-step playbooks</span>
       </div>
     </section>
 
-    <section id="stripe-demo" style="margin-top:2rem;">
-      <h2>Start Selling Instantly</h2>
-      <p>Connect Stripe and start accepting payments today:</p>
+    <!-- CORE BENEFITS -->
+    <section class="container section">
+      <div class="grid">
+        <article class="card">
+          <h3>Attract Clients on Autopilot</h3>
+          <p>AI-driven funnels and follow-up scripts replace guesswork and cold outreach — so your pipeline grows daily.</p>
+          <ul class="list">
+            <li>Plug-and-play funnels for niche offers</li>
+            <li>Templates for DM, email & follow-up</li>
+            <li>SEO-ready page content</li>
+          </ul>
+        </article>
 
-      <!-- Example Stripe Buy Button (replace with your own if using) -->
-      <stripe-buy-button
-        buy-button-id="buy_btn_REPLACE_ME"
-        publishable-key="pk_live_REPLACE_ME">
-      </stripe-buy-button>
+        <article class="card">
+          <h3>Operate with Calm Consistency</h3>
+          <p>Use proven prompts and checklists to deliver high-quality results without burnout or creative fatigue.</p>
+          <ul class="list">
+            <li>Daily action scripts & content prompts</li>
+            <li>Client onboarding & delivery workflows</li>
+            <li>Retention & referral playbooks</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Launch in Minutes</h3>
+          <p>Everything is pre-built — just personalize, publish, and collect payments via Stripe.</p>
+          <ul class="list">
+            <li>No coding or plugins needed</li>
+            <li>Fast GitHub Pages hosting</li>
+            <li>Lifetime updates included</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <section id="ai-automation" style="margin-top:2rem;">
-      <h2>Full AI Automation</h2>
-      <ul>
-        <li>✅ Auto-publishes new content</li>
-        <li>✅ Answers visitor questions</li>
-        <li>✅ Builds pages on demand</li>
-        <li>✅ Runs with minimal management</li>
-      </ul>
+    <!-- FEATURED PROGRAMS -->
+    <section class="container section">
+      <h2 style="margin:0 0 10px">Featured Programs</h2>
+      <p class="mini">Built for the niches we see scaling fastest right now.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <article class="card">
+          <h3>Realtor Lead Machine System</h3>
+          <p>AI-driven scripts, funnels, and automations that replace cold calling and door knocking.</p>
+          <a class="btn btn-primary" href="products/realtor-lead-machine.html">Learn more</a>
+        </article>
+
+        <article class="card">
+          <h3>Calm Strategic CFO™ System</h3>
+          <p>Upgrade from bookkeeping to CFO advisory with dashboards, pricing, and KPI storytelling.</p>
+          <a class="btn btn-primary" href="products/calm-strategic-cfo-mastery.html">Learn more</a>
+        </article>
+
+        <article class="card">
+          <h3>Fitness Coach Client Engine</h3>
+          <p>Daily prompts, DM flows, and a 7-day challenge funnel to keep your calendar full.</p>
+          <a class="btn btn-primary" href="products/fitness-coach-program.html">Learn more</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / QUICK FAQ -->
+    <section class="container section">
+      <div class="grid">
+        <article class="card">
+          <h3>What happens after I buy?</h3>
+          <p>You’ll be redirected to Stripe for secure checkout. After payment, your receipt and access link are emailed instantly.</p>
+        </article>
+        <article class="card">
+          <h3>Can I customize everything?</h3>
+          <p>Yes — every prompt, page, and workflow is editable. Start with our proven baseline, then tailor it to your market.</p>
+        </article>
+        <article class="card">
+          <h3>Is support included?</h3>
+          <p>Each program includes a quick-start guide and “90-minute launch” checklist. You also receive lifetime updates.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="container section cta-block" aria-label="Final call to action">
+      <h2 style="margin:0 0 6px">Start attracting clients today</h2>
+      <p class="mini">Choose your niche, personalize the templates, and launch. Stripe-secure checkout. Lifetime access.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-primary" href="shop.html">Browse the Shop</a>
+        <a class="btn btn-ghost" href="products/quiet-power-realtor-mastery.html">See Mastery Example</a>
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Using AI in Life — Real-World AI. Real-Life Results.</p>
+    <div class="container">© 2025 Using AI in Life™ • <a href="shop.html">Shop</a> • <a href="contact.html">Contact</a></div>
   </footer>
+
 </body>
 </html>
