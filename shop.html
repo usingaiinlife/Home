@@ -1,105 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Shop • Using AI in Life</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
-  <link rel="icon" href="images/favicon.ico"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop | Using AI in Life™ — AI Systems that Attract Clients & Scale Services</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://usingaiinlife.github.io/autopilot-site/shop.html" />
+
+  <!-- Meta description -->
+  <meta name="description" content="Browse AI-powered systems for Realtors, Bookkeepers, CFO advisory, and Fitness Coaches. Ready-made prompts, funnels, and playbooks that attract clients and scale with less effort." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shop | Using AI in Life™" />
+  <meta property="og:description" content="AI systems that attract clients, automate follow-up, and scale delivery. Realtor, Bookkeeper/CFO, and Fitness programs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://usingaiinlife.github.io/autopilot-site/shop.html" />
+  <meta property="og:image" content="https://usingaiinlife.github.io/autopilot-site/images/og-default.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shop | Using AI in Life™" />
+  <meta name="twitter:description" content="AI systems that attract clients, automate follow-up, and scale delivery. Realtor, Bookkeeper/CFO, and Fitness programs." />
+  <meta name="twitter:image" content="https://usingaiinlife.github.io/autopilot-site/images/og-default.jpg" />
+
+  <!-- Styles -->
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    .product-card img{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid #e5e7eb;background:#f8fafc}
-    .product-meta{display:flex;gap:8px;flex-wrap:wrap;margin:.5rem 0}
-    .pill{display:inline-block;background:#eef2ff;color:#1e40af;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700}
-    .price-tag{font-weight:800}
+    :root{
+      --bg:#0b0f1a; --card:#111829; --muted:#8aa1c1; --text:#e9eefc; --pill:#e9edff; --pilltext:#2430a3;
+      --brand:#ffd166; --link:#7aa2ff; --shadow:0 10px 24px rgba(0,0,0,.28);
+    }
+    body{background:var(--bg); color:var(--text); line-height:1.6; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial,sans-serif;}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{border-bottom:1px solid rgba(255,255,255,.06); backdrop-filter:saturate(120%) blur(6px)}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    nav a{margin-right:14px}
+    h1{font-size:clamp(28px,2.6vw,38px); line-height:1.15; margin:10px 0 6px}
+    .lead{color:var(--muted); margin:0 0 20px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin:18px 0 40px}
+    .card{background:var(--card); border-radius:16px; padding:20px; box-shadow:var(--shadow); display:flex; flex-direction:column}
+    .card h2{font-size:20px; margin:0 0 10px}
+    .pill{display:inline-block; background:var(--pill); color:var(--pilltext); font-weight:700; font-size:12px; padding:.28rem .6rem; border-radius:999px; margin:0 .35rem .35rem 0}
+    .desc{color:#d8e2f5; margin:8px 0 14px; min-height:64px}
+    .price{font-weight:800; letter-spacing:.3px; margin-top:auto}
+    .btn{display:inline-block; margin-top:12px; background:var(--brand); color:#1a1a1a; font-weight:800; padding:.7rem .95rem; border-radius:10px}
+    .btn:hover{text-decoration:none; filter:brightness(0.95)}
+    footer{border-top:1px solid rgba(255,255,255,.06); color:var(--muted)}
+    .sr{position:absolute;left:-9999px}
   </style>
+
+  <!-- JSON-LD: Product ItemList (Google Rich Results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Using AI in Life™ Product Catalog",
+    "itemListOrder": "http://schema.org/ItemListOrderAscending",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://usingaiinlife.github.io/autopilot-site/products/realtor-lead-machine.html",
+        "item": {
+          "@type": "Product",
+          "name": "Realtor Lead Machine System",
+          "brand": "Using AI in Life",
+          "category": "Real Estate",
+          "description": "AI-driven funnels, follow-up scripts, and workflows that generate real estate clients without cold calling.",
+          "offers": {
+            "@type": "Offer",
+            "price": "97.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://usingaiinlife.github.io/autopilot-site/products/realtor-lead-machine.html"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://usingaiinlife.github.io/autopilot-site/products/quiet-power-realtor-mastery.html",
+        "item": {
+          "@type": "Product",
+          "name": "Quiet Power Realtor™ Mastery",
+          "brand": "Using AI in Life",
+          "category": "Real Estate",
+          "description": "Influence and authority communication mastery with AI-assisted branding and objection handling.",
+          "offers": {
+            "@type": "Offer",
+            "price": "297.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://usingaiinlife.github.io/autopilot-site/products/quiet-power-realtor-mastery.html"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://usingaiinlife.github.io/autopilot-site/products/bookkeeper-lead-machine.html",
+        "item": {
+          "@type": "Product",
+          "name": "Bookkeeper Lead Machine System",
+          "brand": "Using AI in Life",
+          "category": "Accounting",
+          "description": "Automated outreach, discovery call scripts, and proposals to land recurring bookkeeping clients.",
+          "offers": {
+            "@type": "Offer",
+            "price": "97.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://usingaiinlife.github.io/autopilot-site/products/bookkeeper-lead-machine.html"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://usingaiinlife.github.io/autopilot-site/products/calm-strategic-cfo-mastery.html",
+        "item": {
+          "@type": "Product",
+          "name": "Calm Strategic CFO™ Bookkeeping System",
+          "brand": "Using AI in Life",
+          "category": "Accounting",
+          "description": "CFO advisory dashboards, KPI storytelling, and pricing frameworks to 2–5× client value calmly.",
+          "offers": {
+            "@type": "Offer",
+            "price": "297.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://usingaiinlife.github.io/autopilot-site/products/calm-strategic-cfo-mastery.html"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://usingaiinlife.github.io/autopilot-site/products/fitness-coach-program.html",
+        "item": {
+          "@type": "Product",
+          "name": "Fitness Coach Client Engine",
+          "brand": "Using AI in Life",
+          "category": "Fitness",
+          "description": "Daily content prompts, DM flows, and a 7-day challenge funnel to fill your coaching roster.",
+          "offers": {
+            "@type": "Offer",
+            "price": "97.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://usingaiinlife.github.io/autopilot-site/products/fitness-coach-program.html"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://usingaiinlife.github.io/autopilot-site/products/fitness-coach-mastery.html",
+        "item": {
+          "@type": "Product",
+          "name": "Fitness Coach Mastery",
+          "brand": "Using AI in Life",
+          "category": "Fitness",
+          "description": "Authority content frameworks, premium offer templates, retention playbooks, and AI referrals.",
+          "offers": {
+            "@type": "Offer",
+            "price": "247.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://usingaiinlife.github.io/autopilot-site/products/fitness-coach-mastery.html"
+          }
+        }
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-<header><div class="container"><nav>
-  <a href="index.html">Home</a>
-  <a href="shop.html">Shop</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav></div></header>
-
-<main class="container">
-  <h1>Shop</h1>
-  <p>Choose a product below. Checkout is powered by Stripe.</p>
-
-  <div class="grid">
-    <!-- Realtor Core -->
-    <div class="card product-card">
-      <img src="images/realtor.jpg" alt="Realtor Lead Machine cover" onerror="this.style.display='none'">
-      <h3>Realtor Lead Machine System</h3>
-      <div class="product-meta">
-        <span class="pill">Real Estate</span><span class="pill">Core</span>
-      </div>
-      <p>Pre‑made AI prompts, funnels, and scripts to attract buyers & sellers.</p>
-      <p class="price-tag">$97</p>
-      <a class="btn" href="products/realtor-lead-machine.html">View Details</a>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Realtor Mastery -->
-    <div class="card product-card">
-      <img src="images/realtor-mastery.jpg" alt="Quiet Power Realtor Mastery cover" onerror="this.style.display='none'">
-      <h3>Quiet Power Realtor™ Mastery</h3>
-      <div class="product-meta">
-        <span class="pill">Real Estate</span><span class="pill">Mastery</span>
-      </div>
-      <p>Identity, communication, and AI execution to convert with calm authority.</p>
-      <p class="price-tag">$297</p>
-      <a class="btn" href="products/quiet-power-realtor-mastery.html">View Details</a>
-    </div>
+  <main class="container">
+    <h1>Choose your AI system</h1>
+    <p class="lead">These programs combine proven playbooks with AI to attract clients, automate follow-up, and scale delivery. Checkout is powered by Stripe.</p>
 
-    <!-- Bookkeeper Core -->
-    <div class="card product-card">
-      <img src="images/bookkeeper.jpg" alt="Bookkeeper Lead Machine cover" onerror="this.style.display='none'">
-      <h3>Bookkeeper Lead Machine System</h3>
-      <div class="product-meta">
-        <span class="pill">Bookkeeping</span><span class="pill">Core</span>
-      </div>
-      <p>AI prompts, outreach scripts, and packages to book discovery calls weekly.</p>
-      <p class="price-tag">$97</p>
-      <a class="btn" href="products/bookkeeper-lead-machine.html">View Details</a>
-    </div>
+    <section class="grid" aria-label="Products">
+      <!-- Realtor Core -->
+      <article class="card" itemscope itemtype="https://schema.org/Product">
+        <h2 itemprop="name">Realtor Lead Machine System</h2>
+        <div>
+          <span class="pill">Real Estate</span>
+          <span class="pill">Core</span>
+        </div>
+        <p class="desc" itemprop="description">
+          Generate clients 24/7 with AI-driven funnels, follow-up scripts, and automations that replace cold calling and door knocking.
+        </p>
+        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span aria-hidden="true">$97</span>
+          <meta itemprop="priceCurrency" content="USD" />
+          <meta itemprop="price" content="97.00" />
+        </div>
+        <a class="btn" href="products/realtor-lead-machine.html" aria-label="View details for Realtor Lead Machine System">View Details</a>
+      </article>
 
-    <!-- CFO Mastery -->
-    <div class="card product-card">
-      <img src="images/cfo-mastery.jpg" alt="Calm Strategic CFO Mastery cover" onerror="this.style.display='none'">
-      <h3>Calm Strategic CFO™ Bookkeeping System</h3>
-      <div class="product-meta">
-        <span class="pill">Bookkeeping/CFO</span><span class="pill">Mastery</span>
-      </div>
-      <p>Advisory workflows & CFO prompts to 2–5× client value calmly.</p>
-      <p class="price-tag">$297</p>
-      <a class="btn" href="products/calm-strategic-cfo-mastery.html">View Details</a>
-    </div>
+      <!-- Realtor Mastery -->
+      <article class="card" itemscope itemtype="https://schema.org/Product">
+        <h2 itemprop="name">Quiet Power Realtor™ Mastery</h2>
+        <div>
+          <span class="pill">Real Estate</span>
+          <span class="pill">Mastery</span>
+        </div>
+        <p class="desc" itemprop="description">
+          Convert with calm authority. Master influence, emotional intelligence, and AI-enhanced branding for high-trust client attraction.
+        </p>
+        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span aria-hidden="true">$297</span>
+          <meta itemprop="priceCurrency" content="USD" />
+          <meta itemprop="price" content="297.00" />
+        </div>
+        <a class="btn" href="products/quiet-power-realtor-mastery.html" aria-label="View details for Quiet Power Realtor Mastery">View Details</a>
+      </article>
 
-    <!-- Fitness Core -->
-    <div class="card product-card">
-      <img src="images/fitness.jpg" alt="Fitness Coach Client Engine cover" onerror="this.style.display='none'">
-      <h3>Fitness Coach Client Engine</h3>
-      <div class="product-meta">
-        <span class="pill">Fitness</span><span class="pill">Core</span>
-      </div>
-      <p>Daily scripts, DM flows, and challenge funnels to enroll clients weekly.</p>
-      <p class="price-tag">$97</p>
-      <a class="btn" href="products/fitness-coach-program.html">View Details</a>
-    </div>
+      <!-- Bookkeeper Core -->
+      <article class="card" itemscope itemtype="https://schema.org/Product">
+        <h2 itemprop="name">Bookkeeper Lead Machine System</h2>
+        <div>
+          <span class="pill">Bookkeeping</span>
+          <span class="pill">Core</span>
+        </div>
+        <p class="desc" itemprop="description">
+          Automate outreach and convert leads into recurring bookkeeping clients using ready-made AI prompts and workflows.
+        </p>
+        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span aria-hidden="true">$97</span>
+          <meta itemprop="priceCurrency" content="USD" />
+          <meta itemprop="price" content="97.00" />
+        </div>
+        <a class="btn" href="products/bookkeeper-lead-machine.html" aria-label="View details for Bookkeeper Lead Machine System">View Details</a>
+      </article>
 
-    <!-- Fitness Mastery -->
-    <div class="card product-card">
-      <img src="images/fitness-mastery.jpg" alt="Fitness Coach Mastery cover" onerror="this.style.display='none'">
-      <h3>Fitness Coach Mastery</h3>
-      <div class="product-meta">
-        <span class="pill">Fitness</span><span class="pill">Mastery</span>
-      </div>
-      <p>Authority content system, premium offer stack, and retention playbook.</p>
-      <p class="price-tag">$247</p>
-      <a class="btn" href="products/fitness-coach-mastery.html">View Details</a>
-    </div>
-  </div>
-</main>
+      <!-- CFO Mastery -->
+      <article class="card" itemscope itemtype="https://schema.org/Product">
+        <h2 itemprop="name">Calm Strategic CFO™ Bookkeeping System</h2>
+        <div>
+          <span class="pill">Bookkeeping/CFO</span>
+          <span class="pill">Mastery</span>
+        </div>
+        <p class="desc" itemprop="description">
+          Add premium advisory services with CFO-style clarity dashboards, KPI storytelling, and pricing frameworks to 2–5× client value calmly.
+        </p>
+        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span aria-hidden="true">$297</span>
+          <meta itemprop="priceCurrency" content="USD" />
+          <meta itemprop="price" content="297.00" />
+        </div>
+        <a class="btn" href="products/calm-strategic-cfo-mastery.html" aria-label="View details for Calm Strategic CFO Bookkeeping System">View Details</a>
+      </article>
 
-<footer>© 2025 Using AI in Life</footer>
+      <!-- Fitness Core -->
+      <article class="card" itemscope itemtype="https://schema.org/Product">
+        <h2 itemprop="name">Fitness Coach Client Engine</h2>
+        <div>
+          <span class="pill">Fitness</span>
+          <span class="pill">Core</span>
+        </div>
+        <p class="desc" itemprop="description">
+          Use daily content prompts, DM flows, and an AI-built 7-day challenge funnel to fill your coaching calendar automatically.
+        </p>
+        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span aria-hidden="true">$97</span>
+          <meta itemprop="priceCurrency" content="USD" />
+          <meta itemprop="price" content="97.00" />
+        </div>
+        <a class="btn" href="products/fitness-coach-program.html" aria-label="View details for Fitness Coach Client Engine">View Details</a>
+      </article>
+
+      <!-- Fitness Mastery -->
+      <article class="card" itemscope itemtype="https://schema.org/Product">
+        <h2 itemprop="name">Fitness Coach Mastery</h2>
+        <div>
+          <span class="pill">Fitness</span>
+          <span class="pill">Mastery</span>
+        </div>
+        <p class="desc" itemprop="description">
+          Scale to premium tiers with authority content frameworks, premium offer templates, retention playbooks, and AI-driven referrals.
+        </p>
+        <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span aria-hidden="true">$247</span>
+          <meta itemprop="priceCurrency" content="USD" />
+          <meta itemprop="price" content="247.00" />
+        </div>
+        <a class="btn" href="products/fitness-coach-mastery.html" aria-label="View details for Fitness Coach Mastery">View Details</a>
+      </article>
+    </section>
+
+    <p class="lead">All products are delivered digitally with lifetime access. Secure checkout via Stripe.</p>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Using AI in Life™</div>
+  </footer>
 </body>
 </html>
