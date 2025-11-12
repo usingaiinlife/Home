@@ -1,0 +1,1 @@
+// window.BOTPRESS_BOT_ID="YOUR_BOT_ID";
